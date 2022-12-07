@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/parking_ws/install
+
+Name: romi_interface
+Description: Description of romi_interface
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lromi_interface
+Requires: geometry_msgs roscpp rospy std_msgs

@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/parking_ws/devel
+
+Name: romi_drive
+Description: Description of romi_drive
+Version: 0.0.0
+Cflags: -I/home/ubuntu/parking_ws/src/romi_drive/include -I/opt/ros/noetic/include -I/usr/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp
+Libs: -L${prefix}/lib /home/ubuntu/parking_ws/devel/lib/libromi_drive.so /opt/ros/noetic/lib/libroscpp.so /usr/lib/arm-linux-gnueabihf/libpthread.so /usr/lib/arm-linux-gnueabihf/libboost_chrono.so.1.71.0 /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so.1.71.0 /opt/ros/noetic/lib/librosconsole.so /opt/ros/noetic/lib/librosconsole_log4cxx.so /opt/ros/noetic/lib/librosconsole_backend_interface.so /usr/lib/arm-linux-gnueabihf/liblog4cxx.so /usr/lib/arm-linux-gnueabihf/libboost_regex.so.1.71.0 /opt/ros/noetic/lib/libxmlrpcpp.so /opt/ros/noetic/lib/libroscpp_serialization.so /opt/ros/noetic/lib/librostime.so /usr/lib/arm-linux-gnueabihf/libboost_date_time.so.1.71.0 /opt/ros/noetic/lib/libcpp_common.so /usr/lib/arm-linux-gnueabihf/libboost_system.so.1.71.0 /usr/lib/arm-linux-gnueabihf/libboost_thread.so.1.71.0 /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so.0.4 -lromi_drive
+Requires: geometry_msgs roscpp rospy std_msgs

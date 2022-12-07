@@ -1,0 +1,8 @@
+# Define the goal
+float32[] path
+---
+# Define the result
+bool is_goal
+---
+# Define a feedback message
+float32 percent_complete

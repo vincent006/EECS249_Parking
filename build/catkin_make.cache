@@ -1,0 +1,2 @@
+romi_interface
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/parking_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/parking_ws/install -G Unix Makefiles
