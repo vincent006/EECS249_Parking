@@ -5,4 +5,6 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("data_analysis")
 subdirs("romi_interface")
+subdirs("laser_line_extraction")

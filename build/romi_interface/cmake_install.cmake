@@ -38,19 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/romi_interface/action" TYPE FILE FILES "/home/ubuntu/parking_ws/src/romi_interface/action/follow_path.action")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/romi_interface/msg" TYPE FILE FILES
-    "/home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathAction.msg"
-    "/home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionGoal.msg"
-    "/home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionResult.msg"
-    "/home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionFeedback.msg"
-    "/home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg"
-    "/home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg"
-    "/home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg"
-    )
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/romi_interface/msg" TYPE FILE FILES "/home/ubuntu/parking_ws/src/romi_interface/msg/ParkingInfo.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

@@ -53,78 +53,16 @@ CMAKE_BINARY_DIR = /home/ubuntu/parking_ws/build
 # Include the progress variables for this target.
 include romi_interface/CMakeFiles/romi_interface_generate_messages_lisp.dir/progress.make
 
-romi_interface/CMakeFiles/romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp
-romi_interface/CMakeFiles/romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionGoal.lisp
-romi_interface/CMakeFiles/romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionResult.lisp
-romi_interface/CMakeFiles/romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionFeedback.lisp
-romi_interface/CMakeFiles/romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathGoal.lisp
-romi_interface/CMakeFiles/romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathResult.lisp
-romi_interface/CMakeFiles/romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathFeedback.lisp
+romi_interface/CMakeFiles/romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/ParkingInfo.lisp
 
 
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathAction.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionGoal.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionFeedback.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionResult.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from romi_interface/follow_pathAction.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathAction.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg
-
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionGoal.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionGoal.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionGoal.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionGoal.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionGoal.lisp: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionGoal.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from romi_interface/follow_pathActionGoal.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionGoal.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg
-
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionResult.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionResult.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionResult.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionResult.lisp: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionResult.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionResult.lisp: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionResult.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from romi_interface/follow_pathActionResult.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionResult.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg
-
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionFeedback.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionFeedback.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionFeedback.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionFeedback.lisp: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionFeedback.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionFeedback.lisp: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionFeedback.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from romi_interface/follow_pathActionFeedback.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionFeedback.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg
-
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathGoal.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathGoal.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from romi_interface/follow_pathGoal.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg
-
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathResult.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathResult.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Lisp code from romi_interface/follow_pathResult.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg
-
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathFeedback.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathFeedback.lisp: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Lisp code from romi_interface/follow_pathFeedback.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg
+/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/ParkingInfo.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/ParkingInfo.lisp: /home/ubuntu/parking_ws/src/romi_interface/msg/ParkingInfo.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from romi_interface/ParkingInfo.msg"
+	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/parking_ws/src/romi_interface/msg/ParkingInfo.msg -Iromi_interface:/home/ubuntu/parking_ws/src/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg
 
 romi_interface_generate_messages_lisp: romi_interface/CMakeFiles/romi_interface_generate_messages_lisp
-romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathAction.lisp
-romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionGoal.lisp
-romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionResult.lisp
-romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathActionFeedback.lisp
-romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathGoal.lisp
-romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathResult.lisp
-romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/follow_pathFeedback.lisp
+romi_interface_generate_messages_lisp: /home/ubuntu/parking_ws/devel/share/common-lisp/ros/romi_interface/msg/ParkingInfo.lisp
 romi_interface_generate_messages_lisp: romi_interface/CMakeFiles/romi_interface_generate_messages_lisp.dir/build.make
 
 .PHONY : romi_interface_generate_messages_lisp

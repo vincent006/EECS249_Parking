@@ -1,3 +1,4 @@
+from ._ParkingInfo import *
 from ._follow_pathAction import *
 from ._follow_pathActionFeedback import *
 from ._follow_pathActionGoal import *

@@ -24,7 +24,7 @@ int main (int argc, char **argv)
     romi_init();
 
     while(ros::ok()) {
-        cmd_sub = n.subscribe("/romi/cmd_pose", 1000, cmdCallback);
+        //cmd_sub = n.subscribe("/romi/cmd_pose", 1000, cmdCallback);
         //romi_drive_direct(100, 100);
 
         rate.sleep();

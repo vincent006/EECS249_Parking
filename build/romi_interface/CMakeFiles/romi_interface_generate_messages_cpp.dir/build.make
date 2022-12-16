@@ -53,85 +53,17 @@ CMAKE_BINARY_DIR = /home/ubuntu/parking_ws/build
 # Include the progress variables for this target.
 include romi_interface/CMakeFiles/romi_interface_generate_messages_cpp.dir/progress.make
 
-romi_interface/CMakeFiles/romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h
-romi_interface/CMakeFiles/romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionGoal.h
-romi_interface/CMakeFiles/romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionResult.h
-romi_interface/CMakeFiles/romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionFeedback.h
-romi_interface/CMakeFiles/romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathGoal.h
-romi_interface/CMakeFiles/romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathResult.h
-romi_interface/CMakeFiles/romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathFeedback.h
+romi_interface/CMakeFiles/romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/ParkingInfo.h
 
 
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathAction.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionGoal.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionFeedback.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionResult.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from romi_interface/follow_pathAction.msg"
-	cd /home/ubuntu/parking_ws/src/romi_interface && /home/ubuntu/parking_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathAction.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/include/romi_interface -e /opt/ros/noetic/share/gencpp/cmake/..
-
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionGoal.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionGoal.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionGoal.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from romi_interface/follow_pathActionGoal.msg"
-	cd /home/ubuntu/parking_ws/src/romi_interface && /home/ubuntu/parking_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionGoal.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/include/romi_interface -e /opt/ros/noetic/share/gencpp/cmake/..
-
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionResult.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionResult.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionResult.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionResult.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionResult.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionResult.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from romi_interface/follow_pathActionResult.msg"
-	cd /home/ubuntu/parking_ws/src/romi_interface && /home/ubuntu/parking_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionResult.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/include/romi_interface -e /opt/ros/noetic/share/gencpp/cmake/..
-
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionFeedback.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionFeedback.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionFeedback.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionFeedback.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from romi_interface/follow_pathActionFeedback.msg"
-	cd /home/ubuntu/parking_ws/src/romi_interface && /home/ubuntu/parking_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionFeedback.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/include/romi_interface -e /opt/ros/noetic/share/gencpp/cmake/..
-
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathGoal.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from romi_interface/follow_pathGoal.msg"
-	cd /home/ubuntu/parking_ws/src/romi_interface && /home/ubuntu/parking_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/include/romi_interface -e /opt/ros/noetic/share/gencpp/cmake/..
-
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathResult.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathResult.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathResult.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from romi_interface/follow_pathResult.msg"
-	cd /home/ubuntu/parking_ws/src/romi_interface && /home/ubuntu/parking_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/include/romi_interface -e /opt/ros/noetic/share/gencpp/cmake/..
-
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathFeedback.h: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg
-/home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from romi_interface/follow_pathFeedback.msg"
-	cd /home/ubuntu/parking_ws/src/romi_interface && /home/ubuntu/parking_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/include/romi_interface -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/ubuntu/parking_ws/devel/include/romi_interface/ParkingInfo.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/parking_ws/devel/include/romi_interface/ParkingInfo.h: /home/ubuntu/parking_ws/src/romi_interface/msg/ParkingInfo.msg
+/home/ubuntu/parking_ws/devel/include/romi_interface/ParkingInfo.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from romi_interface/ParkingInfo.msg"
+	cd /home/ubuntu/parking_ws/src/romi_interface && /home/ubuntu/parking_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/parking_ws/src/romi_interface/msg/ParkingInfo.msg -Iromi_interface:/home/ubuntu/parking_ws/src/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/include/romi_interface -e /opt/ros/noetic/share/gencpp/cmake/..
 
 romi_interface_generate_messages_cpp: romi_interface/CMakeFiles/romi_interface_generate_messages_cpp
-romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathAction.h
-romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionGoal.h
-romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionResult.h
-romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathActionFeedback.h
-romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathGoal.h
-romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathResult.h
-romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/follow_pathFeedback.h
+romi_interface_generate_messages_cpp: /home/ubuntu/parking_ws/devel/include/romi_interface/ParkingInfo.h
 romi_interface_generate_messages_cpp: romi_interface/CMakeFiles/romi_interface_generate_messages_cpp.dir/build.make
 
 .PHONY : romi_interface_generate_messages_cpp

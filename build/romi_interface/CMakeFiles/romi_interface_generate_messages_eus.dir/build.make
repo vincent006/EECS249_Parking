@@ -53,83 +53,21 @@ CMAKE_BINARY_DIR = /home/ubuntu/parking_ws/build
 # Include the progress variables for this target.
 include romi_interface/CMakeFiles/romi_interface_generate_messages_eus.dir/progress.make
 
-romi_interface/CMakeFiles/romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l
-romi_interface/CMakeFiles/romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionGoal.l
-romi_interface/CMakeFiles/romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionResult.l
-romi_interface/CMakeFiles/romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionFeedback.l
-romi_interface/CMakeFiles/romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathGoal.l
-romi_interface/CMakeFiles/romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathResult.l
-romi_interface/CMakeFiles/romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathFeedback.l
+romi_interface/CMakeFiles/romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/ParkingInfo.l
 romi_interface/CMakeFiles/romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/manifest.l
 
 
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathAction.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionGoal.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionFeedback.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionResult.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from romi_interface/follow_pathAction.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathAction.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg
-
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionGoal.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionGoal.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionGoal.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionGoal.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionGoal.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from romi_interface/follow_pathActionGoal.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionGoal.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg
-
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionResult.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionResult.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionResult.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionResult.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionResult.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from romi_interface/follow_pathActionResult.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionResult.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg
-
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionFeedback.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionFeedback.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionFeedback.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionFeedback.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionFeedback.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from romi_interface/follow_pathActionFeedback.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathActionFeedback.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg
-
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathGoal.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathGoal.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from romi_interface/follow_pathGoal.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathGoal.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg
-
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathResult.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathResult.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp code from romi_interface/follow_pathResult.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathResult.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg
-
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathFeedback.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathFeedback.l: /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating EusLisp code from romi_interface/follow_pathFeedback.msg"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/parking_ws/devel/share/romi_interface/msg/follow_pathFeedback.msg -Iromi_interface:/home/ubuntu/parking_ws/devel/share/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg
+/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/ParkingInfo.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/ParkingInfo.l: /home/ubuntu/parking_ws/src/romi_interface/msg/ParkingInfo.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from romi_interface/ParkingInfo.msg"
+	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/parking_ws/src/romi_interface/msg/ParkingInfo.msg -Iromi_interface:/home/ubuntu/parking_ws/src/romi_interface/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p romi_interface -o /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg
 
 /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating EusLisp manifest code for romi_interface"
-	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface romi_interface geometry_msgs actionlib_msgs
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/parking_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for romi_interface"
+	cd /home/ubuntu/parking_ws/build/romi_interface && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface romi_interface geometry_msgs
 
 romi_interface_generate_messages_eus: romi_interface/CMakeFiles/romi_interface_generate_messages_eus
-romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathAction.l
-romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionGoal.l
-romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionResult.l
-romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathActionFeedback.l
-romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathGoal.l
-romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathResult.l
-romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/follow_pathFeedback.l
+romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/msg/ParkingInfo.l
 romi_interface_generate_messages_eus: /home/ubuntu/parking_ws/devel/share/roseus/ros/romi_interface/manifest.l
 romi_interface_generate_messages_eus: romi_interface/CMakeFiles/romi_interface_generate_messages_eus.dir/build.make
 
