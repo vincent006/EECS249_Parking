@@ -2,4 +2,5 @@
     <include file="$(find romi_interface)/launch/X2.launch"/>
     <include file="$(find romi_interface)/launch/line_extract.launch"/>
     <node name="detection_node" pkg="romi_interface" type="parking_detection.py" />
+    <!-- node name="romi_drive_node" pkg="romi_interface" type="romi_drive_node" / -->
 </launch>

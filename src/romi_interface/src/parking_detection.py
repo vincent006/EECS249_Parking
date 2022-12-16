@@ -161,7 +161,7 @@ def publish_parking_info(p_info, parking_pub):
     width = parking_profile['top_y'] - parking_profile['bottom_y']
     depth = parking_profile['in_x'] - parking_profile['out_x']
 
-    if state <= 2 or not(width >= 0.2 and depth >= 0.1):
+    if state <= 2 or not(width >= 0.2):
         p_info.isParking = False
         p_info.out_x = parking_profile['out_x']
         parking_pub.publish(p_info)
@@ -181,7 +181,7 @@ if __name__ == '__main__':
 
     rospy.Subscriber("line_segments", LineSegmentList, callback)
 
-    pose_pub = rospy.Publisher("romi_cur_pose", Pose2D, queue_size=10)
+    pose_pub = rospy.Publisher("romi_pose", Pose2D, queue_size=10)
     cur_pose = Pose2D()
     parking_pub = rospy.Publisher("parking_info", ParkingInfo, queue_size=10)
     p_info = ParkingInfo()

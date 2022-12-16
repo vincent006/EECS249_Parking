@@ -4,6 +4,7 @@
 romi_interface/CMakeFiles/romi_interface_node.dir/include/romi_interface/romi.cpp.o: /home/ubuntu/parking_ws/src/romi_interface/include/romi_interface/romi.cpp
 romi_interface/CMakeFiles/romi_interface_node.dir/include/romi_interface/romi.cpp.o: /home/ubuntu/parking_ws/src/romi_interface/include/romi_interface/romi.h
 
+romi_interface/CMakeFiles/romi_interface_node.dir/src/romi_drive_node.cpp.o: /home/ubuntu/parking_ws/devel/include/romi_interface/ParkingInfo.h
 romi_interface/CMakeFiles/romi_interface_node.dir/src/romi_drive_node.cpp.o: /home/ubuntu/parking_ws/src/romi_interface/include/romi_interface/romi.h
 romi_interface/CMakeFiles/romi_interface_node.dir/src/romi_drive_node.cpp.o: /home/ubuntu/parking_ws/src/romi_interface/src/romi_drive_node.cpp
 romi_interface/CMakeFiles/romi_interface_node.dir/src/romi_drive_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/Pose2D.h
