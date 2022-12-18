@@ -118,7 +118,7 @@ def callback(data):
     # check the stored lines, use their start points to identify the location of the goal           
     num_verti_lines = len(verti_lines)
     num_horiz_lines = len(horiz_lines)
-    if state == 3 and num_horiz_lines == 0:
+    if num_horiz_lines == 0:
         state = 2
         cur_pos = np.array([0.0, 0.0])
         start_x = [verti_lines[i][0] for i in range(num_verti_lines)]

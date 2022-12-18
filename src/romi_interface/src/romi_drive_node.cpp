@@ -61,7 +61,7 @@ int main (int argc, char **argv)
     float p_pos = 100;
     float i_pos = 0.0;
     float d_pos = 0.0;
-    float p_angle = 0.4;
+    float p_angle = 0.6;
     float i_angle = 0.0;
     float d_angle = 0.0;
     n.getParam("/romi_drive_node/freq", freq);
@@ -123,7 +123,7 @@ int main (int argc, char **argv)
                 case 2:
                     int angle_adjust = round(p_angle * (90 - cur_theta));
                     int dist_adjust = round(p_pos * (out_x - 0.25));
-                    romi_drive_direct(75 - angle_adjust + dist_adjust, 75 + angle_adjust - dist_adjust);
+                    romi_drive_direct(60 - angle_adjust + dist_adjust, 60 + angle_adjust - dist_adjust);
                     break;
             }
         }
