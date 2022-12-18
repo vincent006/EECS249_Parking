@@ -32,6 +32,16 @@ float in_x = 0.0;
 */ 
 int state = 1;
 
+// position to start parking
+float start_x = 0.25;
+float start_y = 0.25;
+
+// array of waypoints for the parking trajactory
+float path_x[] = {0.1, 0, 0};
+float path_y[] = {0.1, -0.1, 0}
+float path_angle[] = {135, 90, 90};
+int step = 0;
+
 void poseCallback(const geometry_msgs::Pose2D& pose)
 {
     cur_x = pose.x;
@@ -59,7 +69,7 @@ int main (int argc, char **argv)
     
     int freq = 20;
     float p_pos = 100;
-    float i_pos = 0.0;
+    float i_pos = 1;
     float d_pos = 0.0;
     float p_angle = 0.6;
     float i_angle = 0.0;
@@ -80,18 +90,19 @@ int main (int argc, char **argv)
     bool button_pressed = false;
     int count = 0;
 
+    // for PID control
+    float err_x = 0.0;
+    float err_y = 0.0;
+    float err_angle = 0.0;
+    float integral_err_y = 0.0;
+    float integral_err_x = 0.0;
+
+    float base_speed = 0.0;
+    float angle_speed = 0.0;
+
     while(ros::ok()) {
-        // code for control
-        // ROS_INFO("x: %.4f y: %f theta: %.4f", cur_x, cur_y, cur_theta);
-        // ROS_INFO("---");
-        // ROS_INFO("x: %.4f y: %f theta: %.4f", cur_x, cur_y, cur_theta);
-        // ROS_INFO("---");
-        // ROS_INFO("isParking: %d", isParking);
-        // ROS_INFO("width: %.4f, depth: %.4f", width, depth);
-        // ROS_INFO("top_y: %.4f, bottom_y: %.4f, out_x: %.4f, in_x: %.4f", top_y, bottom_y, out_x, in_x);
-        // ROS_INFO("---");
         romi_sensors_poll(&sensors);
-        if(sensors.buttons.left || sensors.buttons.right) {
+        if(sensors.buttons.left || sensors.buttons.right || sensors.bumps.left || sensors.bumps.center || sensors.bumps.right) {
             button_pressed = true;
         }
         if(button_pressed) {
@@ -99,7 +110,7 @@ int main (int argc, char **argv)
         }
         if(count > 2) {
             count = 0;
-            if (sensors.buttons.left || sensors.buttons.right) {
+            if (sensors.buttons.left || sensors.buttons.right || sensors.bumps.left || sensors.bumps.center || sensors.bumps.right) {
                 isStopped = !isStopped;
                 romi_drive_direct(0, 0);
             } else {
@@ -110,6 +121,8 @@ int main (int argc, char **argv)
         if(isStopped) {
             if (isParking) {
                 state = 3;
+                integral_err_x = 0.0;
+                integral_err_y = 0.0;
             }
             if (!isParking && out_x > 0.0) {
                 state = 2;
@@ -125,6 +138,36 @@ int main (int argc, char **argv)
                     int dist_adjust = round(p_pos * (out_x - 0.25));
                     romi_drive_direct(60 - angle_adjust + dist_adjust, 60 + angle_adjust - dist_adjust);
                     break;
+
+                case 3:
+                    err_x = start_x - cur_x;
+                    err_y = start_y - cur_y;
+                    err_angle = cur_theta - 90;
+                    integral_err_x += err_x;
+                    integral_err_y += err_y;
+                    base_speed = p_pos * err_y + i_pos * integral_err_y;
+                    angle_speed = p_pos * err_x + i_pos * integral_err_x + p_angle * err_angle;
+                    romi_drive_direct(round(base_speed + angle_speed), round(base_speed - angle_speed));
+
+                    if (err_x < 0.01 && err_y < 0.01 && err_angle < 10) {
+                        state = 4;
+                        integral_err_x = 0.0;
+                        integral_err_y = 0.0;
+                        step = 0;
+                    }
+                    break;
+
+                case 4:
+                    if(step == 0) {
+                        err_x = path_x - cur_x;
+                        err_y = path_y - cur_y;
+                        err_angle = cur_theta - 90;
+                        integral_err_x += err_x;
+                        integral_err_y += err_y;
+                        base_speed = p_pos * err_y + i_pos * integral_err_y;
+                        angle_speed = p_pos * err_x + i_pos * integral_err_x + p_angle * err_angle;
+                        romi_drive_direct(round(base_speed + angle_speed), round(base_speed - angle_speed));
+                    }
             }
         }
         printf("out_x = %.5f cur_theta = %.5f\n", out_x, cur_theta);
@@ -133,3 +176,5 @@ int main (int argc, char **argv)
     }
 
 }
+
+// rosrun romi_interface romi_drive_node _freq:=20 _p_pos:=100 _p_angle:=0.6
