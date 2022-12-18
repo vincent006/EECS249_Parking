@@ -37,6 +37,8 @@ romi_interface/ParkingInfo.h
 /home/ubuntu/parking_ws/src/romi_interface/src/romi_interface/ParkingInfo.h
 cstdio
 -
+cmath
+-
 
 /opt/ros/noetic/include/geometry_msgs/Pose2D.h
 string

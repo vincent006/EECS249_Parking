@@ -21,7 +21,7 @@ from romi_interface.msg import ParkingInfo
 #    action: None
 state = 1
 # reference direction for the robot to drive forward
-ref_direction = 0
+ref_direction = 0.0
 # profile of the parking spot, each line consists of the starting pt and ending pt
 parking_profile = {'top_y': 0.0, 'bottom_y': 0.0, 'out_x': 0.0, 'in_x': 0.0, 'center':np.array([0, 0])}
 # current postion with respect to the parking space
@@ -30,11 +30,7 @@ cur_angle = 0.0
 
 direction_mixing = 0.5
 profile_mixing = 0.5
-line_thres = 15
-
-start_pos = np.array([-25, 25])
-start_angle = 90
-
+line_thres = 15.0
 
 
 def calculate_direction(start_pt, end_pt):
@@ -73,9 +69,9 @@ def callback(data):
         line_length = np.linalg.norm(start_pt - end_pt)
         start_pt, end_pt, cur_direction = calculate_direction(start_pt, end_pt)
     
-        # the line appears within 0.3m of the robot, and the reference line length
+        # the line appears within 0.5m of the robot, and the reference line length
         #   should be longer than 0.25m
-        if not (dist_to_start < 0.3 or dist_to_end < 0.3):
+        if not (dist_to_start < 0.5 or dist_to_end < 0.5):
             continue
         if state == 1: 
             if line_length > 0.25 :
@@ -122,8 +118,9 @@ def callback(data):
     # check the stored lines, use their start points to identify the location of the goal           
     num_verti_lines = len(verti_lines)
     num_horiz_lines = len(horiz_lines)
-    if num_verti_lines >= 1 and num_horiz_lines == 0:
+    if state == 3 and num_horiz_lines == 0:
         state = 2
+        cur_pos = np.array([0.0, 0.0])
         start_x = [verti_lines[i][0] for i in range(num_verti_lines)]
         parking_profile['out_x'] = min(start_x)
     elif num_verti_lines >= 1 and num_horiz_lines >= 1:
@@ -160,20 +157,20 @@ def publish_cur_pose(cur_pose, pose_pub):
 def publish_parking_info(p_info, parking_pub):
     width = parking_profile['top_y'] - parking_profile['bottom_y']
     depth = parking_profile['in_x'] - parking_profile['out_x']
+    print("publishing, state = ", state, ", width = ", width)
 
     if state <= 2 or not(width >= 0.2):
         p_info.isParking = False
-        p_info.out_x = parking_profile['out_x']
-        parking_pub.publish(p_info)
     else:
         p_info.isParking = True
-        p_info.width = width
-        p_info.depth = depth
-        p_info.top_y = parking_profile['top_y']
-        p_info.bottom_y = parking_profile['bottom_y']
-        p_info.in_x = parking_profile['in_x']
-        p_info.out_x = parking_profile['out_x']
-        parking_pub.publish(p_info)
+
+    p_info.width = width
+    p_info.depth = depth
+    p_info.top_y = parking_profile['top_y']
+    p_info.bottom_y = parking_profile['bottom_y']
+    p_info.in_x = parking_profile['in_x']
+    p_info.out_x = parking_profile['out_x']
+    parking_pub.publish(p_info)
 
 
 if __name__ == '__main__':
