@@ -33,8 +33,8 @@ float in_x = 0.0;
 int state = 1;
 
 // position to start parking
-float start_x = -0.25;
-float start_y = 0.25;
+float start_x = -0.18;
+float start_y = 0.16;
 
 // array of waypoints for the parking trajactory
 float path_x[] = {-0.1, 0, 0};
@@ -96,6 +96,8 @@ int main (int argc, char **argv)
     float err_angle = 0.0;
     float integral_err_y = 0.0;
     float integral_err_x = 0.0;
+    float integral_err_angle = 0.0;
+    float last_err_y = 0.0;
 
     float base_speed = 0.0;
     float angle_speed = 0.0;
@@ -112,6 +114,10 @@ int main (int argc, char **argv)
             count = 0;
             if (sensors.buttons.left || sensors.buttons.right || sensors.bumps.left || sensors.bumps.center || sensors.bumps.right) {
                 isStopped = !isStopped;
+                state =1;
+                integral_err_x = 0.0;
+                integral_err_y = 0.0;
+                integral_err_angle = 0.0;
                 romi_drive_direct(0, 0);
             } else {
                 button_pressed = false;
@@ -119,10 +125,12 @@ int main (int argc, char **argv)
         }
 
         if(isStopped) {
-            if (isParking) {
+            if (isParking && state < 3) {
                 state = 3;
                 integral_err_x = 0.0;
                 integral_err_y = 0.0;
+                integral_err_angle = 0.0;
+                last_err_y = start_x - cur_x;
             }
             if (!isParking && out_x > 0.0) {
                 state = 2;
@@ -135,7 +143,7 @@ int main (int argc, char **argv)
 
                 case 2:
                     err_angle = 90 - cur_theta;
-                    err_x = out_x - 0.25;
+                    err_x = out_x - 0.15;
                     romi_drive_direct(round(60 - p_angle * err_angle + p_pos * err_x), 
                                       round(60 + p_angle * err_angle - p_pos * err_x));
                     break;
@@ -144,47 +152,55 @@ int main (int argc, char **argv)
                     err_x = start_x - cur_x;
                     err_y = start_y - cur_y;
                     err_angle = cur_theta - 90;
-                    if (err_x < 0.01 && err_y < 0.01 && err_angle < 10) {
+                    if (abs(err_x) < 0.01 && abs(err_y) < 0.01 && abs(err_angle) < 5) {
                         state = 4;
                         integral_err_x = 0.0;
                         integral_err_y = 0.0;
+                        integral_err_angle = 0.0;
                         step = 0;
+                        romi_drive_direct(0, 0);
                     } else {
                         integral_err_x += err_x;
                         integral_err_y += err_y;
-                        base_speed = p_pos * err_y + i_pos * integral_err_y;
-                        angle_speed = p_pos * err_x + i_pos * integral_err_x + p_angle * err_angle;
+                        integral_err_angle += err_angle;
+                        base_speed = p_pos * err_y + i_pos * integral_err_y + d_pos * (err_y - last_err_y);
+                        last_err_y = err_y;
+                        angle_speed = p_pos * err_x + i_pos * integral_err_x + p_angle * err_angle + i_angle * integral_err_angle;
                         romi_drive_direct(round(base_speed + angle_speed), round(base_speed - angle_speed));
+                        //printf("base_speed = %.2f angle_speed = %.2f\n", base_speed, angle_speed);
                     }
                     break;
 
-                case 4:
-                    err_x = path_x[step] - cur_x;
-                    err_y = path_y[step] - cur_y;
-                    err_angle = cur_theta - 90;
-                    if (err_x < 0.01 && err_y < 0.01 && err_angle < 10) {
-                        step++;
-                        integral_err_x = 0.0;
-                        integral_err_y = 0.0;
-                    } else {
-                        integral_err_x += err_x;
-                        integral_err_y += err_y;
-                        base_speed = p_pos * err_y + i_pos * integral_err_y;
-                        angle_speed = p_pos * err_x + i_pos * integral_err_x + p_angle * err_angle;
-                        if(step == 0) {
-                            romi_drive_direct(round(base_speed - angle_speed), round(base_speed + angle_speed));
-                        } else if(step >= 1) {
-                            romi_drive_direct(round(base_speed + angle_speed), round(base_speed - angle_speed));
-                        }
+                // case 4:
+                //     err_x = path_x[step] - cur_x;
+                //     err_y = path_y[step] - cur_y;
+                //     err_angle = cur_theta - 90;
+                //     if (err_x < 0.01 && err_y < 0.01 && err_angle < 10) {
+                //         step++;
+                //         integral_err_x = 0.0;
+                //         integral_err_y = 0.0;
+                //     } else {
+                //         integral_err_x += err_x;
+                //         integral_err_y += err_y;
+                //         base_speed = p_pos * err_y + i_pos * integral_err_y;
+                //         angle_speed = p_pos * err_x + i_pos * integral_err_x + p_angle * err_angle;
+                //         if(step == 0) {
+                //             romi_drive_direct(round(base_speed - angle_speed), round(base_speed + angle_speed));
+                //         } else if(step >= 1) {
+                //             romi_drive_direct(round(base_speed + angle_speed), round(base_speed - angle_speed));
+                //         }
                         
-                    }
+                //     }
+                //     break;
             }
         }
-        printf("out_x = %.5f cur_theta = %.5f\n", out_x, cur_theta);
+        printf("state: %d cur_pos = (%.5f, %.5f, %.5f)\n", state, cur_x, cur_y, cur_theta);
+        printf("err_x = %.5f err_y = %.5f err_angle = %.5f\n", err_x, err_y, err_angle);
+        printf("integral_err_x = %.5f integral_err_y = %.5f integral_err_angle = %.5f\n", integral_err_x, integral_err_y, integral_err_angle);
         ros::spinOnce();
         rate.sleep();
     }
 
 }
 
-// rosrun romi_interface romi_drive_node _freq:=20 _p_pos:=100 _i_pos:=0.1 _p_angle:=0.6
+// rosrun romi_interface romi_drive_node _freq:=20 _p_pos:=80 _i_pos:=0.5 _d_pos:=10 _p_angle:=5 _i_angle:=10
