@@ -7,7 +7,7 @@
         <param name="p_pos" value="100.0" />
         <param name="i_pos" value="0.0" />
         <param name="d_pos" value="0.0" />
-        <param name="p_angle" value="0.0" />
+        <param name="p_angle" value="0.6" />
         <param name="i_angle" value="0.0" />
         <param name="d_angle" value="0.0" />
     </node -->

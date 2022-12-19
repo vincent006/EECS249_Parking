@@ -80,10 +80,10 @@ def callback(data):
 
         if state >= 2:
             # reseting the reference direction if a new reference is detected
-            if line_length > 0.25 and abs(cur_direction - ref_direction) > 30:
+            if (dist_to_start < 0.5 or dist_to_end < 0.5) and line_length > 0.25 and abs(cur_direction - ref_direction) > 30:
                 state = 1
                 continue
-            if abs(cur_direction - ref_direction) < 30:
+            if abs(cur_direction - ref_direction) < 10:
                 ref_direction = direction_mixing * cur_direction + (1 - direction_mixing) * ref_direction
                 # print("ref_direction: ", ref_direction)
                 
@@ -109,8 +109,8 @@ def callback(data):
                         horiz_lines.append(start_rotated)
                     else: 
                         horiz_lines.append(end_rotated)
-            # print("verti arrays: ", verti_lines)
-            # print("hori arrays: ", horiz_lines)
+    # print("verti arrays: ", verti_lines)
+    # print("hori arrays: ", horiz_lines)
 
     # update the current angle
     cur_angle = 180 - ref_direction
@@ -157,7 +157,7 @@ def publish_cur_pose(cur_pose, pose_pub):
 def publish_parking_info(p_info, parking_pub):
     width = parking_profile['top_y'] - parking_profile['bottom_y']
     depth = parking_profile['in_x'] - parking_profile['out_x']
-    print("publishing, state = ", state, ", width = ", width)
+    # print("publishing, state = ", state, ", width = ", width)
 
     if state <= 2 or not(width >= 0.2):
         p_info.isParking = False
