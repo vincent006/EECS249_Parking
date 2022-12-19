@@ -103,8 +103,17 @@ int main (int argc, char **argv)
     float angle_speed = 0.0;
 
     while(ros::ok()) {
+        // code for control
+        // ROS_INFO("x: %.4f y: %f theta: %.4f", cur_x, cur_y, cur_theta);
+        // ROS_INFO("---");
+        // ROS_INFO("x: %.4f y: %f theta: %.4f", cur_x, cur_y, cur_theta);
+        // ROS_INFO("---");
+        // ROS_INFO("isParking: %d", isParking);
+        // ROS_INFO("width: %.4f, depth: %.4f", width, depth);
+        // ROS_INFO("top_y: %.4f, bottom_y: %.4f, out_x: %.4f, in_x: %.4f", top_y, bottom_y, out_x, in_x);
+        // ROS_INFO("---");
         romi_sensors_poll(&sensors);
-        if(sensors.buttons.left || sensors.buttons.right || sensors.bumps.left || sensors.bumps.center || sensors.bumps.right) {
+        if(sensors.buttons.left || sensors.buttons.right) {
             button_pressed = true;
         }
         if(button_pressed) {
@@ -112,7 +121,7 @@ int main (int argc, char **argv)
         }
         if(count > 2) {
             count = 0;
-            if (sensors.buttons.left || sensors.buttons.right || sensors.bumps.left || sensors.bumps.center || sensors.bumps.right) {
+            if (sensors.buttons.left || sensors.buttons.right) {
                 isStopped = !isStopped;
                 state =1;
                 integral_err_x = 0.0;
