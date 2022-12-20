@@ -39,6 +39,8 @@ cstdio
 -
 cmath
 -
+cstdint
+-
 
 /opt/ros/noetic/include/geometry_msgs/Pose2D.h
 string

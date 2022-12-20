@@ -28,8 +28,8 @@ parking_profile = {'top_y': 0.0, 'bottom_y': 0.0, 'out_x': 0.0, 'in_x': 0.0, 'ce
 cur_pos = np.array([0.0, 0.0])
 cur_angle = 0.0
 
-direction_mixing = 0.3
-profile_mixing = 0.3
+direction_mixing = 0.1
+profile_mixing = 0.1
 line_thres = 15.0
 
 
@@ -109,8 +109,8 @@ def callback(data):
                         horiz_lines.append(start_rotated)
                     else: 
                         horiz_lines.append(end_rotated)
-            # print("verti arrays: ", verti_lines)
-            # print("hori arrays: ", horiz_lines)
+    print("verti arrays: ", verti_lines)
+    print("hori arrays: ", horiz_lines)
 
     # update the current angle
     cur_angle = 180 - ref_direction
@@ -137,7 +137,7 @@ def callback(data):
     
     # calculate the goal
     if state >= 3:
-        parking_profile['center'] = np.array([parking_profile['out_x'] + 0.075, \
+        parking_profile['center'] = np.array([parking_profile['out_x'] + 0.05, \
                                                  (parking_profile['top_y']+ parking_profile['bottom_y']) / 2])
         cur_pos = -parking_profile['center']
         # print("parking profile: ", parking_profile)
@@ -159,7 +159,7 @@ def publish_parking_info(p_info, parking_pub):
     depth = parking_profile['in_x'] - parking_profile['out_x']
     #print("publishing, state = ", state, ", width = ", width)
 
-    if state <= 2 or not(width >= 0.2):
+    if state <= 2 or not(width >= 0.3):
         p_info.isParking = False
     else:
         p_info.isParking = True
