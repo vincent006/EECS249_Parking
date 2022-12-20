@@ -230,8 +230,8 @@ int main (int argc, char **argv)
                         last_x = cur_x;
                         last_y = cur_y;
                         angle_speed = p_pos_x * err_x + i_pos_x * integral_err_x + p_angle * err_angle + i_angle * integral_err_angle;
-                        cmd_left = round(20 + base_speed + angle_speed/2);
-                        cmd_right = round(20 + base_speed - angle_speed/2);
+                        cmd_left = round(20 + base_speed + angle_speed);
+                        cmd_right = round(20 + base_speed - angle_speed);
                         if(cmd_left > 75)
                             cmd_left = 75;
                         else if(cmd_left < -75)
@@ -289,8 +289,12 @@ int main (int argc, char **argv)
                     //     printf("step = %d target: (%.1f, %.1f, %.1f)\n", step, path_x[step], path_y[step], path_angle[step]);
                     //     romi_drive_direct(cmd_left, cmd_right);
                     // }
+                    if(cur_x == 0.0 && cur_y == 0.0) {
+                        romi_drive_direct(0,0);
+                        break;
+                    }
                     if(step == 0) {
-                        romi_drive_direct(-55, -20);
+                        romi_drive_direct(-55, -30);
                         if (cur_theta > 140) {
                             step = 1;
                         }
