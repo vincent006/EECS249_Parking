@@ -2,13 +2,16 @@
     <include file="$(find romi_interface)/launch/X2.launch"/>
     <include file="$(find romi_interface)/launch/line_extract.launch"/>
     <node name="detection_node" pkg="romi_interface" type="parking_detection.py" />
-    <!-- node name="romi_drive_node" pkg="romi_interface" type="romi_drive_node" >
+    <node name="romi_drive_node" pkg="romi_interface" type="romi_drive_node" >
         <param name="freq" value="20" />
-        <param name="p_pos" value="100.0" />
-        <param name="i_pos" value="0.0" />
-        <param name="d_pos" value="0.0" />
-        <param name="p_angle" value="0.6" />
-        <param name="i_angle" value="0.0" />
+        <param name="p_pos_x" value="200.0" />
+        <param name="i_pos_x" value="1.0" />
+        <param name="d_pos_x" value="0.0" />
+        <param name="p_pos_y" value="150.0" />
+        <param name="i_pos_y" value="10.0" />
+        <param name="d_pos_y" value="0.0" />
+        <param name="p_angle" value="1.0" />
+        <param name="i_angle" value="0.005" />
         <param name="d_angle" value="0.0" />
-    </node -->
+    </node>
 </launch>

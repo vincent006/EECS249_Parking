@@ -323,4 +323,4 @@ int main (int argc, char **argv)
 }
 
 // state 3:
-// rosrun romi_interface romi_drive_node _freq:=20 _p_pos_x:=50 _i_pos_x:=0.5 _d_pos_x:=0 _p_pos_y:=150 _i_pos_y:=1 _d_pos_y:=0 _p_angle:=0.5 _i_angle:=0.005
+// rosrun romi_interface romi_drive_node _freq:=20 _p_pos_x:=200 _i_pos_x:=1 _d_pos_x:=0 _p_pos_y:=150 _i_pos_y:=10 _d_pos_y:=0 _p_angle:=1 _i_angle:=0.005
