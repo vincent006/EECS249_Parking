@@ -1,5 +1,5 @@
 # EECS 149/249A Self-parking Car
-&nbsp;&nbsp;&nbsp;&nbsp; This repo is for the final project for EECS 149/249A in Fall 2022. This project is to have a robot car autonomously identify a parking space and execute parallel parking into the center of the parking space without hitting obstacles. The project involves reading data from a lidar, extracting the parking edge from the data, and controlling the robot to follow a predefined path. </br>
+&nbsp;&nbsp;&nbsp;&nbsp; This repo is for the final project for EECS 149/249A in Fall 2022. This project is to have a robot car autonomously identify a parking space and execute parallel parking into the center of the parking space without hitting obstacles. The project involves reading data from a lidar, extracting the parking edge from the data, and controlling the robot to follow a predefined path. [Demo video](https://youtube.com/shorts/Hq7gWWD0YVw)</br>
 <img src="https://github.com/vincent006/EECS249_Parking/blob/main/IMG_8018.JPG" width="300" height="400">
 ### Hardware
 - TI-RSLK Max robot car from the lab (romi)
