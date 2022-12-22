@@ -14,7 +14,7 @@
 4. Enable uart port /dev/ttyAMA0 on theraspberry pi following this [link](https://askubuntu.com/questions/1254376/enable-uart-communication-on-pi4-ubuntu-20-04)
 5. Add the user (ubuntu) to gpio group following this [link](https://www.earnfs.com/en/html/1912.htm)
 6. Install wiringPi
-7. Clone this workspace into the home directory
+7. Clone this workspace into the home directory as `parking_ws`
 8. Go to `~/parking_ws/src`, clone this [repo](https://github.com/kam3k/laser_line_extraction)
 9. Go to `~/parking_ws`, run `catkin_make` to compile the workspace
 10. Source the workspace by `souce ~/parking_ws/devel/setup.bash`
